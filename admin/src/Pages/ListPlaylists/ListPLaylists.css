@@ -1,0 +1,52 @@
+th, td {
+    border: 1px solid #777;
+    padding: 3px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.list-audios-btn:hover{
+    opacity: 0.8;
+}
+
+table th {
+    color: var(--primary-color);
+}
+
+.audio {
+    cursor: pointer;
+}
+.audio.selected {
+  background-color: #858045;
+}
+.audio:hover {
+    background-color: #55522e;;
+}
+
+/* Form  */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    color: orange;
+    font-weight: bold;
+  }
+  
+  table {
+    width: 60%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid gray;
+  }
+  .list-playlists-section {
+    flex-grow: 1;
+  }
+  
+  
+  

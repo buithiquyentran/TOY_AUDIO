@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #E5AD08;
+    --text-color: #fff;
+    --background-color: rgb(33 37 41);
+}
+body {
+  background-color: rgb(18,18,18);
+  color: #fff;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+}
+
+.pages {
+  flex-grow: 1;
+  border-radius: 4px;
+  width: 100%;
+  margin: 0 8px;
+  background-color:  var(--background-color);
+  margin-top: 73px;
+  margin-left: 19%;
+  min-height: 50vh;
+}
+.has-nowplaying {
+  margin-right: 27%;
+}
+.playlists-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;;
+
+}
+.user_create_head {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.user-create-name{
+  text-align: center;
+  background-color: #ffcc00;
+  align-content: center;
+  flex-grow: 1;
+  height: 100%;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.audio-for-cpl {
+  width: 100%;
+  height: 42px;
+  margin: 6px 0;
+
+}
+.btn-create-playlist {
+  border: solid 1px var(--primary-color);
+  height: 40px;
+  border-radius: 15px;
+  margin: 12px 0;
+  color: var(--primary-color);
+  font-weight: 500;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 76px;
+  cursor: pointer;
+}
+.btn-create-playlist:hover {
+  background-color: var(--primary-color);
+}
+.icon {
+  color: var(--primary-color);
+  font-size: 27px;
+  cursor: pointer;
+  padding: 2px;
+  background-color: aliceblue;
+  border-radius: 4px;
+}
+.search-btn {
+  display: flex;
+  width: 112px;
+  justify-content: space-around;
+  color: #c1d43d;
+  border: 1px solid #c1d43d;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.add-audio{
+  display: flex;
+  justify-content: space-between;
+  height: 40px; 
+  align-items: center;
+  background-color: rgb(20 18 14);
+  margin: 4px 0;
+  padding-left: 12px;
+
+}
+.add {
+  cursor: pointer;
+  align-content: center;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+  width: 58px;
+  height: 100%;
+}
+.add:hover {
+  opacity: 0.8;
+}
+.add-name,.add-singer {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+.add-singer{
+  flex-grow: 1;
+}
+.audio-cpl {
+  position: relative;
+}
+.de-audio{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.de-audio:hover {
+  opacity: 0.7;
+}
+.search-query {
+  color: var(--primary-color);
+}

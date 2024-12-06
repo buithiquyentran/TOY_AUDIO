@@ -1,0 +1,52 @@
+.footer{
+    padding: 0 15px;
+    margin: 30px 0;
+    position: relative;
+    background-color: #121212;
+}
+
+.footer-policy {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 1px #777;
+    padding: 30px 0;
+
+}
+
+.footer-link {
+   display: flex;
+   justify-content: space-between;
+   padding: 30px 0;
+}
+.footer-link-item {
+    text-decoration: none;
+    color: #999;
+    display: block;
+}
+.footer-link-name{
+    font-weight: 600;
+
+}
+.footer-link-socials {
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+.footer-socials-link {
+    color: #fff;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.1); /* Mờ với độ trong suốt */
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+}
+.footer-socials-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Màu thay đổi khi hover */
+}
+
+.footer-social-icon {
+    background-color: transparent;
+
+}

@@ -1,0 +1,28 @@
+
+.section-title{
+    font-weight: 600;
+    font-size: 24px;
+    color: #D4AF37;
+    
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.home-section {
+    margin-bottom: 16px;
+}
+.home-section-title{
+    display: flex;
+    justify-content: space-between;
+    margin: 6px;
+}
+.show-all{
+    align-self: flex-end;
+    cursor:pointer;
+    color: var(--primary-color);
+}
+.show-all:hover {
+    text-decoration: underline;
+}

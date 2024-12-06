@@ -1,0 +1,79 @@
+.navbar {
+    justify-content: space-between;
+    display: flex;
+    position: fixed;
+    height: 70px;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #777;
+    --bs-navbar-brand-hover-color: var(--primary-color);
+    z-index: 100;
+    background-color: #121212;
+    width: 100%;
+}
+.navbar-nav {
+    --bs-nav-link-hover-color: var(--primary-color);
+}
+
+.navbar-brand {
+    --bs-navbar-brand-color:#fff; 
+    --bs-navbar-brand-hover-color: var(--primary-color);
+    font-weight: bold;
+    width: 20%;
+}
+.form-search {
+    display: flex;
+}
+.btn-submit{
+    background-color: transparent  ;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 8px;
+}
+.btn-submit:hover {
+    background-color: var(--primary-color);
+
+}
+.mr-8{
+    margin-right: 8px;
+}
+.w-30{
+    width: 30% !important;
+}
+.nav-link{
+    font-size: 20px;
+    /* padding: 12px; */
+    color: #fff ;
+    font-weight:600;
+}
+.navbar-l{
+    width: 210px;
+}
+.navbar-r {
+    display: flex;
+    justify-content: space-around;
+}
+.login-section{
+    display: flex;
+    margin-left: 46px;
+}
+.login{
+    padding: 0 12px;
+    align-self: center;
+    cursor: pointer;
+}
+.login:hover {
+    text-decoration: underline;
+
+}
+.user-name {
+    align-self: center;
+    text-align: center;
+    font-weight: 500;
+    margin-left: 8px;
+    font-size: 20px;
+}
+input:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+}

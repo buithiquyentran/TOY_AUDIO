@@ -1,0 +1,225 @@
+.close {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  font-size: 23px;
+  cursor: pointer;
+}
+.close:hover {
+  opacity: 0.8;
+}
+.nowplaying{
+    background-color: var(--background-color);
+    margin: 0 auto;
+    border-radius: 4px;
+    position: fixed;
+    right: 0;
+    width: 26.5%;
+    top: 71px;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 60px;
+}
+.playing-song-name {
+  font-weight: 800;
+    color: #FFD700;
+}
+  .nowplaying .icon-pause {
+    display: none;
+  }
+  
+  .nowplaying.playing .icon-pause {
+    display: inline-block;
+  }
+  
+  .nowplaying.playing .icon-play {
+    display: none;
+  }
+  
+  .dashboard {
+    padding: 16px 10px 16px;
+    top: 0;
+    width: 100%;
+    max-width: 480px;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 4px;
+  }
+  
+  /* HEADER */
+  header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  header h4 {
+    color: #c1d43d;
+    font-size: 12px;
+  }
+  
+  header h2 {
+    color: var(--text-color);
+    font-size: 20px;
+  }
+  
+  /* CD */
+  .cd {
+    display: flex;
+    margin: auto;
+    width: 200px;
+  }
+  
+  .cd-thumb {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    background-size: cover;
+    margin: auto;
+    background-position: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* CONTROL */
+  .control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 18px 0 8px 0;
+    
+  }
+  
+  .control .btn {
+    padding: 18px;
+    font-size: 18px;
+    color: var(--primary-color);
+  }
+  .control .btn.active {
+    color: var(--primary-color);
+  }
+  
+  .control .btn-toggle-play {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+  }
+  .control .btn-repeat, .control .btn-random {
+    position: relative;
+    color:#8a6e1e;
+  }
+ 
+  .btn-repeat .dot, .btn-random .dot {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .progress {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  .progress:focus{
+    border: none;
+  }
+  .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  /* nowplaying-playlist */
+  .nowplaying-playlist {
+    margin-top: 12px;
+
+  }
+  
+  .song {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .song.active {
+    background-color: var(--primary-color);
+  }
+  
+  .song:active {
+    opacity: 0.8;
+  }
+  
+  .song.active .option,
+  .song.active .author,
+  .song.active .title {
+    color: #fff;
+  }
+  
+  .song .thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0 8px;
+  }
+  
+  .song .body {
+    flex: 1;
+    padding: 0 16px;
+  }
+  
+  .song .title {
+    font-size: 18px;
+    color: var(--text-color);
+  }
+  
+  .song .author {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .song .option {
+    padding: 16px 8px;
+    color: #999;
+    font-size: 18px;
+  }
+  .time-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .time{
+    align-self: center;
+    padding: 4px;
+    color: #ead5be;
+  }
+.padding-60 {
+  padding-bottom: 347px;
+  background-color: #121212;
+}

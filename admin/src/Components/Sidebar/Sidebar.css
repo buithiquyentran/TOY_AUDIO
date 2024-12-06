@@ -1,0 +1,28 @@
+.sidebar {
+    background-color:  var(--background-color);
+    margin: 0 8px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    min-width: 13%;
+    font-weight: 600;
+    position: fixed;
+    z-index: 1001;
+    margin-top: 55px;
+}
+
+.sidebar-link {
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 2px;
+    text-decoration: none;
+    color: #fff;
+}
+.sidebar-link.active, .sidebar-link:hover {
+    background-color: #ffcc00;
+    cursor: pointer;
+    color: #333;
+
+}

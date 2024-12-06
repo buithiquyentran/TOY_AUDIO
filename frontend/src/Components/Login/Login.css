@@ -1,0 +1,92 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+
+  }
+  
+  .login-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 600px;
+    background-color: rgb(18,18,18);
+
+  }
+  
+  .login-title {
+    color: var(--primary-color);
+  }
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  
+  .input-container {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #ccc9b2;
+  }
+  
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+  
+.login-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color); 
+    border-radius: 8px;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.login-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+input:focus {
+    outline: none; /* Loại bỏ đường viền mặc định */
+    border: 2px solid var(--primary-color); 
+
+}
+
+.password-container span {
+    position: absolute;
+    right: 10px; /* Điều chỉnh vị trí của biểu tượng mắt */
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+}
+lable {
+    color: #fff;
+}
+.login-f{
+    cursor: pointer;
+    color: #c1d43d;
+}
+.login-f:hover{
+    text-decoration: underline;
+}
+
+

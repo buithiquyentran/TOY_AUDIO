@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+:root {
+  --primary-color: #E5AD08;
+  --text-color: #fff;
+  --background-color: rgb(33 37 41);
+}
+body {
+  background-color: rgb(18,18,18);
+  color: #fff;
+  
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+}
+.pages {
+  /* padding:4px; */
+  background-color:  var(--background-color);
+  border-radius: 4px;
+  margin-left: 14%;
+  margin-top: 55px;
+  flex-grow: 1;
+  transition: width 0.3s;
+}
+
+.pages.with-edit-audio {
+  /* padding: 12px; */
+  margin-right: 28%; /* Giảm chiều rộng khi có EditAudio (28% là chiều rộng của EditAudio) */
+}
+.body {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

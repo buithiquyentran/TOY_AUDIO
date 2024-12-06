@@ -1,0 +1,56 @@
+.avatar-circle {
+    width: 40px; /* Kích thước của avatar */
+    height: 40px;
+    border-radius: 50%; /* Để tạo hình tròn */
+    background-color: #FF5722; /* Màu nền của avatar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Màu của chữ */
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.initial {
+    font-size: 20px;
+}
+.user-dropdown {
+    position: relative;
+}
+.dropdown{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #333;
+    border-radius: 8px;
+    min-width: 210px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    color: white;
+    z-index: 1000;
+  }
+
+  .username {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .user-info{
+    padding-bottom: 10px;
+    border-bottom: solid 1px #777;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+.dropdown-options {
+
+}
+.dropdown-option {
+    padding: 4px 0;
+}
+.dropdown-option:hover {
+    cursor: pointer;
+    color: #c1d43d;
+    text-decoration: underline;
+}

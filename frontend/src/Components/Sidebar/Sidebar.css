@@ -1,0 +1,173 @@
+.sidebar {
+    background-color:  var(--background-color);
+    width: 18%;
+    margin-left: 8px;
+    padding: 6px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-radius: 4px;
+    position: fixed;
+    top: 71px;
+    flex: 1;
+}
+.sidebar-head {
+    align-items: center;
+    display: flex;
+    margin: 8px 0;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #777;
+}
+.sidebar-search {
+    margin-bottom: 6px;
+}
+.lib-icon{
+    font-size: 18px;
+    cursor: pointer;
+}
+.lib-icon-1 {
+    font-size: 30px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+.lib-icon-add{
+    position: absolute;
+    right: 42px;
+}
+.lib-icon-arrow{
+    position: absolute;
+    right: 12px;
+}
+.lib-icon-r {
+    position: absolute;
+    right: 8px;
+}
+.btn-playlist {
+    border: solid 1px var(--primary-color);
+    height: 40px;
+    border-radius: 15px;
+    margin: 12px 0;
+    color: var(--primary-color);
+    font-weight: 500;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+}
+.btn-playlist:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.playlist-list {
+    width: 100%;
+}
+.playlist-sb {
+    margin-top: 4px;
+    display: flex;
+    max-height: 45px;
+    cursor: pointer;
+    padding: 2px;
+
+}
+.de-pl{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.de-pl:hover {
+    opacity: 0.7;
+  }
+.playlist-sb:hover {
+    background-color: rgb(92, 83, 73);
+
+}
+.playlist-img {
+    border-radius: 3px;
+    margin-right: 4px;
+    width: 20%;
+
+}
+.playlist-desc {
+    flex-grow: 1;
+    white-space: nowrap;      /* Không cho xuống dòng */
+    overflow: hidden;         /* Ẩn phần nội dung vượt ra ngoài */
+    text-overflow: ellipsis; 
+    height: 50%;
+    width: 100%;
+    
+}
+.playlist-container {
+    position: relative;
+}
+.playlist-desc {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.playlist-desc-au {
+    white-space: nowrap;      /* Không cho xuống dòng */
+    overflow: hidden;         /* Ẩn phần nội dung vượt ra ngoài */
+    text-overflow: ellipsis; 
+    height: 50%;
+    width: 100%;
+}
+.login-icon {
+    cursor: pointer;
+    color: #c1d43d;
+}
+.login-icon:hover{
+    text-decoration: underline;
+}
+.createPL-container{
+    background-color: #1F1F1F;
+    padding: 6px;
+    border-radius: 4px;
+    position: relative;
+   
+}
+.create-playlist {
+    width: 249px;
+    height: 114px;
+    position: absolute;
+    z-index: 1000;
+    background-color: #c1d43d;
+    padding: 10px;
+    border-radius: 4px;
+    left: 9px;
+    top: 120px;
+    color: #373434;
+}
+.create-playlist-head {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1F1F1F;
+   
+}
+.create-playlist-nav {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1F1F1F;
+    margin-top: 14px;
+    cursor: pointer;
+}
+.create-playlist-cancle {
+    padding-right: 8px;
+}   
+.create-playlist-login {
+    padding: 4px 12px;
+    background-color: #fff;
+    border-radius: 18px;
+
+}
+.create-playlist-cancle:hover, .create-playlist-login:hover {
+    opacity: 0.8;
+}

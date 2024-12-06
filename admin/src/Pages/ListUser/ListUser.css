@@ -1,0 +1,21 @@
+.list-audios-btn{
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none; 
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.list-audios-btn:hover {
+    background-color: #555;
+  }
+  
+.list-audios-btn.active {
+    background-color: #ffcc00; /* Màu nền khi tab được chọn */
+    color: #333;
+    font-weight: bold;
+    border: 2px solid #ffcc00; /* Đường viền để nổi bật */
+}

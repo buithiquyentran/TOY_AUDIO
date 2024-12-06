@@ -1,0 +1,23 @@
+.home-section {
+    margin-bottom: 16px;
+}
+.home-section-title{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.section-title {
+    font-weight: 600;
+    font-size: 27px;
+}
+
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 242px;
+}
+.show-all{
+    align-self: flex-end;
+}

@@ -1,0 +1,16 @@
+.password-container span {
+    position: absolute;
+    right: 10px; /* Điều chỉnh vị trí của biểu tượng mắt */
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+}
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.w50 {
+    width: 48%;
+    margin: 10px;
+}

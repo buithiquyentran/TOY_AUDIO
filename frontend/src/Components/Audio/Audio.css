@@ -1,0 +1,39 @@
+.audio {
+    display: flex;
+    align-items: flex-between; 
+    height: 70px; 
+    border-radius: 4px;
+    cursor: pointer;
+}
+.audio:hover {
+    background-color: rgb(92, 83, 73); 
+
+}
+.audio img {
+    height: 62px;
+    width: 88px;
+    align-self: center;
+    border-radius: 3px;
+    padding-left: 4px;
+
+}
+.audio-info  {
+    width: 60%;
+    flex-grow: 1;
+    margin-left: 4px;
+    align-self: center;
+}
+.audio-info-item {
+    white-space: nowrap;      /* Không cho xuống dòng */
+    overflow: hidden;         /* Ẩn phần nội dung vượt ra ngoài */
+    text-overflow: ellipsis; 
+    height: 50%;
+    flex-grow: 1;
+    width: 100%;
+    justify-content: space-between;
+}
+.duration {
+    align-self: center;
+    padding: 4px;
+    color: #75785b;
+}
