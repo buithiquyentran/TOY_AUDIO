@@ -62,7 +62,7 @@ const ListUser = () => {
     const confirmDelete = confirm(`Bạn có chắc muốn xóa user ${u.id}?`);
     if (!confirmDelete) return;
     try {
-      await axios.delete(`http://localhost:5000/api/user/${u.id}`);
+      await axios.delete(`http://localhost:5000/api/users/${u.id}`);
       window.location.reload();
     } catch (error) {
       console.error('Error deleting audio:', error);

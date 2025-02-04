@@ -7,7 +7,7 @@ const Playlists = ()=>{
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/allplaylists'); // Gọi API ở backend
+                const response = await axios.get('http://localhost:5000/api/playlists/allplaylists'); // Gọi API ở backend
                 const playlistSystem = response.data.filter(playlist => playlist.username === 'B2113345' && playlist.type !=='all');  // playlists cua admin          
                 setPlaylists(playlistSystem); // Lưu dữ liệu vào state
             } catch (error) {

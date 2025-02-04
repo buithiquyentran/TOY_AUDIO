@@ -20,7 +20,7 @@ const Search = () => {
 
     const fetchSearchResults = async (query) => {
         try {
-            const response = await fetch(`http://localhost:5000/audio/search?query=${query}`);
+            const response = await fetch(`http://localhost:5000/api/audios/search?query=${query}`);
             const data = await response.json();
             setSearchResults(data); // Lưu kết quả vào state
         } catch (error) {

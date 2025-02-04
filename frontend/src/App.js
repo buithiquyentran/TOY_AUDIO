@@ -5,7 +5,7 @@ import { All, Music, Podcasts, Playlists,CreatePlaylist, PlaylistList, Search} f
 import Navbar from './Components/Navbar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Login from './Components/Login/Login';
-import Register from './Components/Register/Register';
+import Register from './Components/Register/Register'; 
 
 import Footer from './Components/Footer/Footer';
 import NowPlaying from './Components/NowPlaying/NowPlaying';

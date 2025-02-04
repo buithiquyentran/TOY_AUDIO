@@ -10,11 +10,11 @@ const Music =  ()=>{
     useEffect(() => {
         const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/allaudios'); 
+            const response = await axios.get('http://localhost:5000/api/audios/allaudios'); 
             const songs = response.data.filter(audio => audio.id.startsWith('M'));            
             setAudios(songs); 
 
-            const response1 = await axios.get('http://localhost:5000/allplaylists'); 
+            const response1 = await axios.get('http://localhost:5000/api/playlists/allplaylists'); 
             const  pls= response1.data.filter(pl => pl.type ==='music');            
             setPlaylists(pls); 
 

@@ -17,7 +17,7 @@ const ListAudios = () => {
   }, []);
   const fetchAll = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/allaudios'); // API lấy danh sách audios
+      const response = await axios.get('http://localhost:5000/api/audios/allaudios'); // API lấy danh sách audios
       setAudios(response.data);
     } catch (error) {
       console.error('Error fetching audios:', error);
@@ -25,7 +25,7 @@ const ListAudios = () => {
   };
   const fetchMusics= async () => {
     try {
-      const response = await axios.get('http://localhost:5000/songs'); // API lấy danh sách audios
+      const response = await axios.get('http://localhost:5000/api/audios/songs'); // API lấy danh sách audios
       setAudios(response.data);
     } catch (error) {
       console.error('Error fetching audios:', error);
@@ -33,7 +33,7 @@ const ListAudios = () => {
   };
   const fetchPodcasts= async () => {
     try {
-      const response = await axios.get('http://localhost:5000/podcasts'); // API lấy danh sách audios
+      const response = await axios.get('http://localhost:5000/api/audios/podcasts'); // API lấy danh sách audios
       setAudios(response.data);
     } catch (error) {
       console.error('Error fetching audios:', error);

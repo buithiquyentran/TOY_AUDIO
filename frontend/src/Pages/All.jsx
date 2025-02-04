@@ -12,8 +12,8 @@ const All = ()=>{
     useEffect(() => {
         const fetchData = async () => {
         try {
-            const PlcResponse = await axios.get('http://localhost:5000/allplcollection');
-            const admins = await axios.get(`http://localhost:5000/users?isAdmin=true`);
+            const PlcResponse = await axios.get('http://localhost:5000/api/plcollections/allplcollection');
+            const admins = await axios.get(`http://localhost:5000/api/users?isAdmin=true`);
             // Lọc các playlist có username thuộc danh sách adminUsernames
             const adminUsernames = admins.data.map(admin => admin.username);
 
@@ -21,7 +21,7 @@ const All = ()=>{
 
             setPlcs(adminCollections); // Lưu dữ liệu vào state
 
-            const response1 = await axios.get('http://localhost:5000/allplaylists'); // Gọi API ở backend
+            const response1 = await axios.get('http://localhost:5000/api/playlists/allplaylists'); // Gọi API ở backend
             const  pls= response1.data.filter(pl => pl.name ==='Có thể bạn muốn nghe');            
             setPlaylist(pls[0]); // Lưu dữ liệu vào state
         } catch (error) {

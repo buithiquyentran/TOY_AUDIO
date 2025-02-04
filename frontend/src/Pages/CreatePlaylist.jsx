@@ -47,7 +47,7 @@ const CreatePlaylist = () => {
             }
             const songPromises = fileIds.map(async (songId) => {
                 try {
-                    const response = await axios.get(`http://localhost:5000/audios/${songId}`);
+                    const response = await axios.get(`http://localhost:5000/api/audios/${songId}`);
                     return response.data;  // Trả về dữ liệu bài hát nếu tồn tại
                 } catch (error) {
                     console.warn(`Song ID ${songId} not found, skipping...`);  // Bỏ qua bài hát không tồn tại
@@ -82,16 +82,16 @@ const CreatePlaylist = () => {
   const handleSearch = async () => {
     // setToggle(!toggle)
     try {
-      const response = await fetch(`http://localhost:5000/audio/search?query=${searchQuery}`);
+      const response = await fetch(`http://localhost:5000/api/audios/search?query=${searchQuery}`);
       const data = await response.json();
-      setSearchResults(data); 
+      setSearchResults(data);
     } catch (error) {
       console.error('Error fetching search results:', error);
     } 
   };
   const updatePlaylist = async () => {
     try {
-        const response = await fetch(`http://localhost:5000/playlist/${playlistUser.id}`, {
+        const response = await fetch(`http://localhost:5000/api/playlists/${playlistUser.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json', // Đặt đúng Content-Type
@@ -123,7 +123,7 @@ const CreatePlaylist = () => {
     }
     try {
       // Tạo playlist mới
-      const playlistOfUser = await axios.post('http://localhost:5000/addplaylist', {
+      const playlistOfUser = await axios.post('http://localhost:5000/api/playlists/addplaylist', {
         name: playlistName,
         image: audios[0]?.image || null,
         username: user.username,
@@ -135,7 +135,7 @@ const CreatePlaylist = () => {
         const playlistCollectionExists = async () => {
           try {
             const encodedUsername = encodeURIComponent(user.username);
-            const url = `http://localhost:5000/plcollection/${encodedUsername}`;
+            const url = `http://localhost:5000/api/plcollections/${encodedUsername}`;
             const response = await axios.get(url);
             return response.data;  // Trả về dữ liệu collection nếu tồn tại
           } catch (error) {
@@ -151,7 +151,7 @@ const CreatePlaylist = () => {
           
           // Nếu collection chưa tồn tại, tạo mới
           try {
-            await fetch('http://localhost:5000/addPLcollection', {
+            await fetch('http://localhost:5000/api/plcollection/addPLcollection', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -171,7 +171,7 @@ const CreatePlaylist = () => {
           console.log('response.data.id',playlistOfUser.data.id)
           
           try {
-            await axios.put(`http://localhost:5000/plcollection/${collectionData.id}`, {
+            await axios.put(`http://localhost:5000/api/plcollections/${collectionData.id}`, {
               name:collectionData.name,
               username:collectionData.username,
               type:collectionData.type,

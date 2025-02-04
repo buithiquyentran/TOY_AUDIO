@@ -23,7 +23,7 @@ const HomeYouMayLike = ({playlist})=>{
                 // Tạo các promise để gọi API lấy chi tiết các bài hát
                 const songPromises = allSongIds.map(async songId => {
                     try {
-                        const response = await axios.get(`http://localhost:5000/audios/${songId}`)
+                        const response = await axios.get(`http://localhost:5000/api/audios/${songId}`)
                         return response.data;  // Trả về dữ liệu bài hát nếu tồn tại
                     } catch (error) {
                         console.warn(`Song ID ${songId} not found, skipping...`);  // Bỏ qua bài hát không tồn tại

@@ -26,7 +26,7 @@ const NowPlaying = () => {
                     return;
                 }
                 const songPromises = allSongIds.map(songId =>
-                    axios.get(`http://localhost:5000/audios/${songId}`)
+                    axios.get(`http://localhost:5000/api/audios/${songId}`)
                 );
                 const songResponses = await Promise.all(songPromises);
                 const audiosData = songResponses.map(response => response.data);

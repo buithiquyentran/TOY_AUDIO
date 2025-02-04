@@ -15,6 +15,7 @@ const { BlockList } = require('net')
 app.use(express.json())
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
+
 app.get('/',(req,res)=>{
     res.send("Express App is running")
 }) 
@@ -198,7 +199,6 @@ app.post('/addaudio', async (req, res) => {
 // Creating API for deleting audios
 app.delete('/api/audios/:id', async (req, res) => {
   const audioId = req.params.id;
-
   try {
     // Xóa audio theo ID
     const deletedAudio = await Audio.findOneAndDelete({ id: audioId });
@@ -727,62 +727,6 @@ app.get('/users', async (req, res) => {
       res.status(500).json({ message: 'Error fetching users' });
   }
 });
-
-//check login
-// app.get('/api/check-username', async (req, res) => {
-//   const username = req.query.username;
-
-//   try {
-//     // Kiểm tra xem tên đăng nhập có tồn tại trong cơ sở dữ liệu không
-//     const user = await User.findOne({ username: username });
-//     if (user) {
-//       res.json({ isTaken: true });
-//     } else {
-//       res.json({ isTaken: false });
-//     }
-//   } catch (error) {
-//     console.error('Error checking username:', error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
-
-
-app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:5173'],
-    credentials: true, // Cho phép gửi và nhận cookies
-}));
-
-// Route đăng ký
-// app.post('/register', async (req, res) => {
-//   try {
-//       const { email, username, password } = req.body;
-//       // Kiểm tra dữ liệu đầu vào
-//       if (!email || !username || !password) {
-//           return res.status(400).json({ message: 'Missing required fields' });
-//       }
-
-//       // Kiểm tra username đã tồn tại chưa
-//       const existingEmail= await User.findOne({ email });
-//       const existingUsername = await User.findOne({ username });
-//       if (existingUsername) {
-//         return res.status(409).json({ message: 'Username is already taken' });
-//       }
-//       if (existingEmail) {
-//         return res.status(409).json({ message: 'Email is already taken' });
-//       }
-
-//       // Tạo người dùng mới
-//       const newUser = new User({ email, username, password });
-//       await newUser.save();
-
-//       // Phản hồi thành công
-//       res.status(201).json({ user: newUser });
-//   } catch (error) {
-//       console.error('Error in /register:', error);
-//       res.status(500).json({ message: 'Internal server error' });
-//   }
-// });
-
 
 // Route đăng nhập
 app.post('/api/login', async (req, res) => {

@@ -47,7 +47,7 @@ const Sidebar = () => {
     }, [location.pathname, setPlaylistUser]);
     const handleDeletePlaylist = async(id)=>{
         try {
-            await axios.delete(`http://localhost:5000/api/playlist/${id}`);
+            await axios.delete(`http://localhost:5000/api/playlists/${id}`);
             // fetchData();
           } catch (error) {
             console.error('Error deleting audio:', error);
@@ -61,7 +61,7 @@ const Sidebar = () => {
                 if (storedUser) {
                     user = JSON.parse(storedUser); // Chỉ parse nếu có dữ liệu
                 }
-                const response = await axios.get('http://localhost:5000/allplcollection');
+                const response = await axios.get('http://localhost:5000/api/plcollections/allplcollection');
                 const playlistSystem = response.data.find(
                     (playlistCl) => playlistCl.username === user?.username
                 );
@@ -70,7 +70,7 @@ const Sidebar = () => {
     
                     // Sử dụng Promise.all để gọi API cho tất cả playlistIds
                     const playlistRequests = playlistSystem.playlistIds?.map((plId) =>
-                        axios.get(`http://localhost:5000/playlists/${plId}`)
+                        axios.get(`http://localhost:5000/api/playlists/${plId}`)
                     );
                     
                     const playlistData = await Promise.all(playlistRequests); // Đợi tất cả lời gọi API
